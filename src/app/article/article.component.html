@@ -1,0 +1,26 @@
+<section id="services" class="services section-padding" *ngIf="post">
+        <!-- <h2 class="section-title wow flipInX" data-wow-delay="0.4s" >Your posy</h2> -->
+        <div class="post col-1 wow flipInX" data-wow-delay="0.4s"> 
+            <!-- <app-post [post]="post"></app-post> -->
+            <section id="one" class="wrapper style1">
+                    <div class="inner">
+                        <article class="feature left">
+                            <span class="image"><img src="{{post.image}}" alt="" /></span>
+                            <div class="content">
+                                <h2>{{post.title}}</h2>
+                                <p>Author - {{post.author}} ( {{post.publishedDate | date:'dd-MMM-yyyy'}} )</p>
+                                <!-- <p>{{post.publishedDate | date:'dd-MMM-yyyy'}}</p> -->
+                                <p class="excert">{{post.article}}</p>
+                                
+                            </div>
+                        </article>
+                    </div>
+                </section>
+        </div>
+        <ul class="actions">
+                <li>
+                    <a (click)="getBack()" class="button alt">Back</a>
+                </li>
+            </ul>
+    <!-- <app-footer></app-footer> -->
+</section>

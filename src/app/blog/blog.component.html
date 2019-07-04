@@ -1,0 +1,11 @@
+<section id="services" class="services section-padding" >
+        <h2 class="section-title wow flipInX" data-wow-delay="0.4s" >MY BOGS</h2>
+        <div *ngFor="let post of blog.post"> 
+            <app-post [post]="post"></app-post>
+        </div>
+    <app-footer></app-footer>
+</section>
+    
+
+
+
