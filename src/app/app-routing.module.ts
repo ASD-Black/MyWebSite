@@ -9,6 +9,7 @@ import { WorksComponent } from './works/works.component';
 import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { ArticleComponent } from './article/article.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: 'Contact', component: ContactComponent },
   { path: 'Blog', component: BlogComponent },
   { path: 'article/:id', component: ArticleComponent },
+  { path: '404', component: NotfoundComponent },
+  { path: '**', redirectTo: '/404' },
 ];
 
 

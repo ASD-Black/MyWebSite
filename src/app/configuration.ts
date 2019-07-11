@@ -19,7 +19,7 @@ export const configuration = {
         aContct: '/Contact',
         aImgLink: 'assets/img/about/about-3.jpg'
     },
-
+    
     resume: {
         eduTitl01: 'BSc (Hons) in IT - SLIIT',
         eduYear01: '2016 - 2020',
