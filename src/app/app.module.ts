@@ -16,6 +16,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ArticleComponent } from './article/article.component';
 import { PostComponent } from './post/post.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     BlogComponent,
     ArticleComponent,
     PostComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
