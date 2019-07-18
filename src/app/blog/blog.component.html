@@ -1,7 +1,12 @@
 <section id="services" class="services section-padding" >
         <h2 class="section-title wow flipInX" data-wow-delay="0.4s" >MY BOGS</h2>
-        <div *ngFor="let post of blog.post"> 
+        <div *ngFor="let post of pages"> 
             <app-post [post]="post"></app-post>
+        </div>
+        <div class="pagi">
+        <div class="container">
+            <app-pagination [pager]="pager" (setPage)="setPage($event)"></app-pagination>
+        </div>
         </div>
     <app-footer></app-footer>
 </section>

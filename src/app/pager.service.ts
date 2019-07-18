@@ -8,7 +8,7 @@ export class PagerService {
 
   constructor() { }
 
-  getPager(totalItems: number, currentPage: number =1, pageSize: number = 5){
+  getPager(totalItems: number, currentPage: number = 1, pageSize: number = 10){
     
     let totaPages = Math.ceil(totalItems / pageSize);
 
@@ -43,11 +43,19 @@ export class PagerService {
     let endIndex = Math.min((startIndex + pageSize - 1), (totalItems - 1));
     
     // create and array of pages
-    let pages = Array.from(Array((endPage - 1) - startPage).keys()).map(i => startPage + 1);
+    let pages = Array.from(Array((endPage + 1) - startPage).keys()).map(i => startPage + i );
 
     return{
-      
-    }
+      totalItems: totalItems,
+      currentPage: currentPage,
+      pageSize: pageSize,
+      totaPages: totaPages,
+      startPage: startPage,
+      endPage: endPage,
+      startIndex: startIndex,
+      endIndex: endIndex,
+      pages: pages
+    };
 
 
 

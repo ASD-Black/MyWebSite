@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { PagerService } from '../pager.service';
 
 @Component({
   selector: 'app-pagination',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginationComponent implements OnInit {
 
+  @Input() pager;
+  @Output() setPage: EventEmitter<any> = new EventEmitter<any>(); 
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  setCurrentPage(pageNumber: number){
+    this.setPage.emit(pageNumber);
+
   }
 
 }

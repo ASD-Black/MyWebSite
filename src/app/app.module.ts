@@ -17,6 +17,7 @@ import { ArticleComponent } from './article/article.component';
 import { PostComponent } from './post/post.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { PagerService } from './pager.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ConfigService],
+  providers: [ConfigService, PagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
